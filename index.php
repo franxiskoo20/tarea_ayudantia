@@ -7,9 +7,6 @@
 <!-- fin de mostrar datos -->
 
 <!DOCTYPE html>
-
-
-
 <html lang="en">
 
 <head>
@@ -26,7 +23,6 @@
 <body style="display:flex;justify-content:center;align-items:center; background:#000;flex-direction:column;  margin:0">
 
     <h1 style="color: white; margin:5px 0 0 0">Actividad Listar</h1>
-
 
     <div>
         <table>
@@ -49,7 +45,7 @@
 
     <div>
         <form action="index.php" method="POST" style="text-align: center">
-            <input type="number" min="1" max="10" placeholder="id" name="id_enviar" required >
+            <input type="number" min="1" max="10" placeholder="id" name="id_enviar" required>
             <input type="submit" value="Ver imagen" name="submit" require>
             <br>
         </form>
@@ -68,8 +64,6 @@
               
             }
         ?>
-
-
 
     </div>
 

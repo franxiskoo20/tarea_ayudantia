@@ -1,4 +1,5 @@
 <?php
+
 require_once("bds/conexion.php");
 
 $mostrar_datos_cosultaSql =  "SELECT * FROM imagenes";
