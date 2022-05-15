@@ -6,6 +6,12 @@
 <?php include("mostrar_id_url.php")?>
 <!-- fin de mostrar datos -->
 
+<!-- Francisco Miguel González Placencia
+rut:19.821.574-0
+fecha: 15-05-2022
+
+Tarea: ayudantia -->
+
 <!DOCTYPE html>
 <html lang="en">
 
