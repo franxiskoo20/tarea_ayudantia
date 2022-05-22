@@ -3,7 +3,7 @@
 <!-- fin conexion bds -->
 
 <!-- mostrar datos en la tabla -->
-<?php include("mostrar_id_url.php")?>
+<?php include("controlador/mostrar_id_url.php")?>
 <!-- fin de mostrar datos -->
 
 <!-- Francisco Miguel González Placencia
@@ -36,13 +36,16 @@ Tarea: ayudantia -->
             <tr>
                 <th scope="col">id</th>
                 <th scope="col">Url</th>
+                <th scope="col">Modificar</th>
+                <th scope="col">Eliminar</th>
             </tr>
 
             <?php  if($mostrar_datos_cosulta):  foreach($mostrar_datos_cosulta as $row): ?>
             <tr>
                 <td><?php echo $row['id']?></td>
                 <td><a href="<?php echo $row['url'] ?>" target="_blank"><?php echo $row['url'] ?></a></td>
-
+                <td><a href="vistas/modificar_imagen.php?id=<?php echo $row['id'] ?>">Modificar</a></td>
+                <td><a href="controlador/eliminar_imagen.php?id=<?php echo $row['id'] ?>">Eliminar</a></td>
             </tr>
             <?php endforeach;endif ?>
 
@@ -50,10 +53,14 @@ Tarea: ayudantia -->
     </div>
 
     <div>
+        <form action="controlador/insertar_imagen.php" method="POST" style="text-align: center">
+            <input type="text" name="imagen" placeholder="url imagen">
+            <input type="submit" value="Subir imagen">
+        </form>
+        <br>
         <form action="index.php" method="POST" style="text-align: center">
-            <input type="number" min="1" max="10" placeholder="id" name="id_enviar" required>
+            <input type="number" min="1" placeholder="ingrese id " name="id_enviar" required>
             <input type="submit" value="Ver imagen" name="submit" require>
-            <br>
         </form>
 
         <?php
@@ -67,7 +74,7 @@ Tarea: ayudantia -->
               $Imagen = $dato["url"];
 
               echo "<img src=".$Imagen." alt='gato'>"; 
-              
+          
             }
         ?>
 
